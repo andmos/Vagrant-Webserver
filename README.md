@@ -2,7 +2,7 @@ Vagrant
 =======
 
 My Vagrant template for a quick and easy webserver running apache and PHP.
-Forwords 8080 to 80 and symlincs /vagrant/ folder to /var/www for easy web-development environment.
+Forwards 8080 to 80 and symlincs /vagrant/ folder to /var/www for easy web-development environment.
  
     sudo apt-get install -y virtualbox vagrant
     git clone 
