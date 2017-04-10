@@ -18,8 +18,10 @@ do
     install $program 
 done 
 
-echo "Symlinking /var/www/html folder to /vagrant folder..."
+echo "Symlinking /var/www folder to /vagrant folder..."
 
+rm -rf /var/www
+mkdir /var/www
 ln -fs /vagrant /var/www/html
 
 echo "All done! Access webserver from localhost:8080 or go 'vagrant ssh' to access the server." 
