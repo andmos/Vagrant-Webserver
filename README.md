@@ -1,21 +1,38 @@
-Vagrant
-=======
+# Vagrant
 
-My Vagrant template for a quick and easy webserver running apache and PHP.
-Forwards 8080 to 80 and symlincs /vagrant/ folder to /var/www for easy web-development environment.
+My Vagrant template for a quick and easy webserver running Apache and PHP.
+The setup forwards 8080 to 80 and 443 to 8443, and then symlinks the `/vagrant/` folder to `/var/www/html` for an easy web development environment.
  
-    sudo apt-get install -y virtualbox vagrant
-    git clone 
-    vagrant up
+## Installation
 
-Current tested setup:
-OSX:
+### Windows 10 (Administrative cmd.exe)
 
-    Vagrant 1.2.7
-    Virtualbox 4.1.18  
+```
+cd <folder where to install vagrant machine>
+choco install -y vagrant virtualbox git
+git clone https://github.com/andmos/Vagrant-Webserver.git
+vagrant up
+vagrant ssh
+```
 
-Debian:
+### Linux (Ubuntu 16.04)
 
-    Kernel 3.14
-    Vagrant 1.2.7
-    Virtalbox 4.2.24
+```
+cd <folder where to install vagrant machine>
+sudo apt-get install -y virtualbox vagrant git
+git clone https://github.com/andmos/Vagrant-Webserver.git
+vagrant up
+vagrant ssh
+```
+
+## Currently tested setup:
+
+**Windows 10**
+
+* Vagrant 1.9.3
+* VirtualBox 5.1.18
+
+**Ubuntu 16.04**
+
+* Vagrant 1.9.3
+* VirtualBox 5.1.18
