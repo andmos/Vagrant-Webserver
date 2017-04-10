@@ -1,7 +1,7 @@
 # Vagrant
 
 My Vagrant template for a quick and easy webserver running Apache and PHP.
-The setup forwards 8080 to 80 and 443 to 8443, and then symlinks the `/vagrant/` folder to `/var/www/html` for an easy web development environment.
+The setup forwards 8080 to 80 and 443 to 8443, and then symlinks the `/vagrant` folder to `/var/www/html` for an easy web development environment.
  
 ## Installation
 
