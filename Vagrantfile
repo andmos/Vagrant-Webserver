@@ -1,12 +1,27 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant::Config.run do |config|
-  config.vm.box = "virtualUbuntu"
+VAGRANTFILE_API_VERSION = "2"
 
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  config.vm.provision :shell, :path => "BootStrap"
-  config.vm.forward_port 80, 8080
-  config.vm.forward_port 443, 8443 
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "geerlingguy/ubuntu1604"
+  config.ssh.insert_key = false
+
+  config.vm.provider :virtualbox do |v|
+    v.name = "1604box"
+    v.memory = 512
+    v.cpus = 2
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--ioapic", "on"]
+  end
+
+  config.vm.hostname = "lamp"
+  config.vm.provision "shell", path: "BootStrap"
+  config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 443, host: 8443, host_ip: "127.0.0.1"
+
+  # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
+  config.vm.define :lamp do |lamp|
+  end
 
 end
