@@ -1,4 +1,33 @@
-<html><body><h1>Vagrant works!</h1>
-<p>This is the default web page for the Vagrant webserver!.</p>
-<p>The web server software is running, just add your web - files here.</p>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to your Vagrant webserver</title>
+  <style type="text/css">
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  div#main {
+      margin: 0 auto;
+      width: 500px;
+      text-align: center;
+      padding-top: 50px;
+  }
+  p#bold {
+      font-weight: bold;
+      padding-bottom: 10px;
+  }
+  span#pre {
+      font-family: Courier New, Courier, monospace;
+      color: brown;
+  }
+  </style>
+</head>
+<body>
+  <div id="main">
+      <p id="bold">Welcome!</p>
+      <p>This is your Vagrant webserver. Add files to <span id="pre">/vagrant</span>, and you'll be able to enjoy your fresh server in no time!</p>
+  </div>
+</body>
+</html>
