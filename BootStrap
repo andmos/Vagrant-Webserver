@@ -6,7 +6,7 @@ function install() {
 
 programs="build-essential vim curl htop git make python-dev apache2 php php-mysql php-mysqlnd php-mdb2-driver-mysql lynx" 
 
-echo "Installing web-server essentials... "
+echo "Installing web-server essentials... This will take some time..."
 
 sudo apt-get update >/dev/null 2>&1 
 
@@ -24,4 +24,4 @@ rm -rf /var/www
 mkdir /var/www
 ln -fs /vagrant /var/www/html
 
-echo "All done! Access webserver from localhost:8080 or go 'vagrant ssh' to access the server." 
+echo "All done! Access the webserver from http://localhost:8080 or execte 'vagrant ssh' to access the server." 
