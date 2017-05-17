@@ -24,4 +24,4 @@ rm -rf /var/www
 mkdir /var/www
 ln -fs /vagrant /var/www/html
 
-echo "All done! Access the webserver from http://localhost:8080 or execte 'vagrant ssh' to access the server." 
+echo "All done! Access the webserver from 'http://localhost:8080', or execute 'vagrant ssh' to access the server." 
